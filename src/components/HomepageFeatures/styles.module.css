@@ -1,0 +1,213 @@
+/* =========================================================
+   GAJAH WEBSERVER DOCS THEME - FINAL VERSION
+   Compatible with Docusaurus 3.x
+   Author: Yohanes Oktanio
+   ========================================================= */
+
+/* === Font & Base Colors === */
+:root {
+    --ifm-color-primary: #007aff;
+    --ifm-color-primary-dark: #0066d4;
+    --ifm-color-primary-light: #3395ff;
+    --ifm-font-family-base: "Inter", sans-serif;
+    --ifm-background-color: #0b0b0b;
+    --ifm-color-content: #eaeaea;
+    --ifm-code-font-size: 95%;
+
+    --border-color: #222;
+    --bg-secondary: #111;
+    --glow-color: rgba(0, 122, 255, 0.35);
+}
+
+/* === Global Reset === */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--ifm-background-color);
+    color: var(--ifm-color-content);
+    font-family: var(--ifm-font-family-base);
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--ifm-color-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: var(--ifm-color-primary-light);
+}
+
+/* === Background Glow === */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    background: radial-gradient(
+        400px circle at var(--x, 50%) var(--y, 50%),
+        rgba(0, 122, 255, 0.1),
+        transparent 60%
+    );
+    transition: background 0.2s ease;
+    z-index: 0;
+}
+
+/* === Containers & Sections === */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    padding: 80px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2.5rem;
+}
+
+/* === Hero Section === */
+.hero {
+    text-align: center;
+    padding: 120px 1rem;
+    background: linear-gradient(180deg, #0a0a0a 0%, #0b0b0b 100%);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--ifm-color-primary);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #bbb;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* === Buttons === */
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.btn-primary {
+    background: var(--ifm-color-primary);
+    color: #fff;
+    box-shadow: 0 0 15px var(--glow-color);
+}
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px var(--glow-color);
+}
+
+.btn-secondary {
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid var(--border-color);
+}
+.btn-secondary:hover {
+    background: #222;
+    transform: translateY(-2px);
+}
+
+/* === Features Grid === */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(0, 122, 255, 0.15);
+}
+
+.feature-card .icon {
+    width: 40px;
+    height: 40px;
+    color: var(--ifm-color-primary);
+    margin-bottom: 1rem;
+}
+
+/* === Reveal Animation === */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === Footer === */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 0.95rem;
+    color: #888;
+    border-top: 1px solid var(--border-color);
+    background: #0a0a0a;
+}
+footer a {
+    color: var(--ifm-color-primary);
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    section {
+        padding: 60px 0;
+    }
+}
