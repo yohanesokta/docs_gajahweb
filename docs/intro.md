@@ -14,7 +14,7 @@ Ucapkan selamat tinggal pada skrip manual dan konfigurasi yang tersebar. Fokus p
 Siap untuk menyederhanakan alur kerja Anda? Hanya butuh beberapa menit untuk memulai.
 
 -   **Langkah 1: Instalasi & Setup**
-    Ikuti panduan di **[Getting Started &rarr;](./category/pengguna-normal)** untuk menyiapkan Gajah Webserver di mesin Windows Anda.
+    Ikuti panduan di **[Memulai &rarr;](./pengguna-normal/pra-installasi)** untuk menyiapkan Gajah Webserver di mesin Windows Anda.
 
 
 Selamat datang di *environment* pengembangan lokal yang lebih baik.

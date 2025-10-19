@@ -10,6 +10,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  
   title: "Gajah Web Service",
   tagline: "Dinosaurs are cool",
   favicon: "img/favicon.ico",
@@ -24,6 +25,7 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/page",
+  
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -47,6 +49,7 @@ const config = {
       ({
         docs: {
           sidebarPath: "./sidebars.js",
+          sidebarCollapsed: false,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
