@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Instalasi
 
-Pada instalasi aplikasi gajahweb tidak terlalu berbeda pada instalasi pada software lainya. Pengguna dapat langsung mendownload dari [Halaman Download](/) ataupun melalui [Release Github](https://github.com/yohanesokta/WebServices-Gajah/releases)
+Pada instalasi aplikasi gajahweb tidak terlalu berbeda pada instalasi pada software lainya. Pengguna dapat langsung download dari [Halaman Download](/) ataupun melalui [Release Github](https://github.com/yohanesokta/WebServices-Gajah/releases)
 
 ### Pesan Sambutan
 ---

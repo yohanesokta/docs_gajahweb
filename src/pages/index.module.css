@@ -1,23 +1,207 @@
 /**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
+ * Mendefinisikan variabel untuk tema terang (light mode)
  */
+:root {
+    --hero-gradient-start: #f0f2f5;
+    --hero-gradient-mid1: #ffffff;
+    --hero-gradient-mid2: #e6e9ed;
+    --hero-gradient-end: #f5f7fa;
 
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+    --hero-title-color: #1c1e21; /* Warna teks gelap */
+    --hero-subtitle-color: #333333;
+    --hero-description-color: #555555;
+
+    --hero-mockup-bg: #e9ecef;
+    --hero-mockup-border-color: rgba(0, 0, 0, 0.1);
+    --hero-mockup-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+/**
+ * Mengganti nilai variabel saat tema gelap (dark mode) aktif
+ */
+[data-theme="dark"] {
+    --hero-gradient-start: #1d2a3d;
+    --hero-gradient-mid1: #2d3b50;
+    --hero-gradient-mid2: #1b2635;
+    --hero-gradient-end: #3c4d69;
+
+    --hero-title-color: #ffffff; /* Warna teks terang */
+    --hero-subtitle-color: rgba(255, 255, 255, 0.9);
+    --hero-description-color: rgba(255, 255, 255, 0.8);
+
+    --hero-mockup-bg: #1e293b;
+    --hero-mockup-border-color: rgba(255, 255, 255, 0.1);
+    --hero-mockup-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+}
+
+/* HERO SECTION STYLING */
+.heroBanner {
+    padding: 8rem 0;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 0;
+
+    /* Menggunakan variabel untuk gradient */
+    background: linear-gradient(
+        -45deg,
+        var(--hero-gradient-start),
+        var(--hero-gradient-mid1),
+        var(--hero-gradient-mid2),
+        var(--hero-gradient-end)
+    );
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.heroLayout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.heroText {
+    flex: 1;
+    max-width: 600px;
+    z-index: 1;
+}
+
+.heroTitle {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--hero-title-color); /* Menggunakan variabel */
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.heroSubtitle {
+    font-size: 1.75rem;
+    margin-top: 1rem;
+    font-weight: 300;
+    color: var(--hero-subtitle-color); /* Menggunakan variabel */
+}
+
+.heroDescription {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    color: var(--hero-description-color); /* Menggunakan variabel */
 }
 
 .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.heroBadges {
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.heroBadges img {
+    transition: transform 0.2s ease;
+}
+
+.heroBadges img:hover {
+    transform: translateY(-3px);
+}
+
+/* HERO VISUAL (RIGHT SIDE) */
+.heroVisual {
+    flex: 1;
+    perspective: 1500px;
+}
+
+.imageMockup {
+    background-color: var(--hero-mockup-bg); /* Menggunakan variabel */
+    border-radius: 12px;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    position: relative;
+    box-shadow: var(--hero-mockup-shadow); /* Menggunakan variabel */
+    border: 1px solid var(--hero-mockup-border-color); /* Menggunakan variabel */
+    transform: rotateX(10deg) rotateY(-15deg) rotateZ(-5deg);
+    transition: transform 0.5s ease;
+    animation: floatAnimation 6s ease-in-out infinite;
+}
+
+.imageMockup:hover {
+    transform: rotate(0);
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: rotateX(10deg) rotateY(-15deg) rotateZ(-5deg) translateY(0px);
+    }
+    50% {
+        transform: rotateX(10deg) rotateY(-15deg) rotateZ(-5deg)
+            translateY(-20px);
+    }
+    100% {
+        transform: rotateX(10deg) rotateY(-15deg) rotateZ(-5deg) translateY(0px);
+    }
+}
+
+.imageMockup::before {
+    content: "";
+    position: absolute;
+    top: 0.75rem;
+    left: 1rem;
+    width: 54px;
+    height: 12px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 12"><circle cx="6" cy="6" r="6" fill="%23FF5F56"/><circle cx="27" cy="6" r="6" fill="%23FFBD2E"/><circle cx="48" cy="6" r="6" fill="%2327C93F"/></svg>');
+    background-repeat: no-repeat;
+}
+
+.heroImage {
+    display: block;
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 996px) {
+    .heroBanner {
+        padding: 4rem 0;
+        text-align: center;
+    }
+    .heroLayout {
+        flex-direction: column;
+    }
+    .heroText {
+        margin-bottom: 3rem;
+    }
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+    .heroSubtitle {
+        font-size: 1.25rem;
+    }
+    .buttons {
+        justify-content: center;
+    }
+    .heroBadges {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .heroVisual {
+        display: none;
+    }
 }
