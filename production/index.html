@@ -8,7 +8,7 @@
         </title>
         <meta
             name="description"
-            content="Gajah Webserver adalah lingkungan pengembangan lokal untuk Windows yang ringan, bertenaga, dan siap pakai, mencakup Nginx, Multi-PHP, MariaDB, Redis, dan integrasi Flutter."
+            content="Gajah Webserver adalah lingkungan pengembangan lokal untuk Windows dan Linux yang ringan, bertenaga, dan siap pakai, mencakup Nginx, Multi-PHP, MariaDB, Redis, dan integrasi Flutter."
         />
         <meta
             property="og:image"
@@ -36,7 +36,7 @@
         />
         <meta
             property="og:description"
-            content="Gajah Webserver adalah server lokal untuk Windows dengan Nginx, Multi-PHP, MariaDB, Redis, dan integrasi Flutter. Ringan, cepat, dan open-source."
+            content="Gajah Webserver adalah server lokal untuk Windows dan Linux dengan Nginx, Multi-PHP, MariaDB, Redis, dan integrasi Flutter. Ringan, cepat, dan open-source."
         />
         <meta property="og:url" content="https://www.gajahweb.tech" />
         <meta property="og:type" content="website" />
@@ -46,7 +46,7 @@
         />
         <meta
             name="twitter:description"
-            content="Lingkungan pengembangan lokal super cepat dengan Nginx, PHP, MariaDB, Redis, dan Flutter. Gratis & open-source."
+            content="Lingkungan pengembangan lokal super cepat dengan Nginx, PHP, MariaDB, Redis, dan Flutter untuk Windows dan Linux. Gratis & open-source."
         />
     </head>
 
@@ -65,11 +65,22 @@
                     Nginx, Multi-PHP, MariaDB, dan Redis dengan satu klik.
                     Ringan, bertenaga, dan siap untuk proyek masa depan Anda.
                 </p>
+                <p style="margin: 30px 0 10px 0;">Available for Windows and Linux</p>
+
+                <div class="linux-install-section reveal delay-4">
+                    <h4>Unix/Linux</h4>
+                    <div class="install-command-box">
+                        <span class="install-command-text">
+                            curl -fsSL http://install.gajahweb.tech/linux.sh | bash
+                        </span>
+                        <button class="btn btn-secondary btn-copy">Copy</button>
+                    </div>
+                </div>
                 <div class="hero-buttons">
                     <a
                         href="https://github.com/yohanesokta/WebServices-Gajah/releases/download/v2.0/gajahweb-setup.exe"
                         class="btn btn-primary"
-                        >Unduh Versi Terbaru</a
+                        >Unduh Versi Windows 64 bit</a
                     >
                     <a href="/page/docs/intro" class="btn btn-third"
                         >Documentation</a
@@ -80,6 +91,7 @@
                         > Lihat di GitHub</a
                     >
                 </div>
+                
             </div>
         </header>
 
@@ -163,34 +175,39 @@
 
             <section class="info-section">
                 <div class="container">
-                    <h2 class="section-title reveal">
-                        Didesain untuk Setiap Developer
-                    </h2>
+                    <div class="developer-highlight-card reveal">
+                        <h2 class="section-title">
+                            Didesain untuk Setiap Developer
+                        </h2>
+                        <p class="section-subtitle">Membangun Masa Depan Web Bersama: Solusi Inovatif, Dokumentasi Lengkap, dan Alat Pengembangan Terdepan untuk Setiap Kebutuhan Anda.</p>
+                    </div>
                     <div class="info-grid">
-                        <div class="info-card reveal delay-1">
-                            <h3><span>👩‍💻</span>Untuk Freelancer & Agensi</h3>
-                            <p>
-                                Kelola puluhan proyek klien dengan kebutuhan
-                                versi PHP yang berbeda tanpa pusing. Ganti
-                                lingkungan pengembangan dalam hitungan detik.
-                            </p>
-                        </div>
-                        <div class="info-card reveal delay-2">
-                            <h3><span>🎓</span>Untuk Mahasiswa & Pelajar</h3>
-                            <p>
-                                Lupakan konfigurasi rumit. Cukup unduh,
-                                jalankan, dan fokus pada hal terpenting: belajar
-                                dan membuat kode yang luar biasa.
-                            </p>
-                        </div>
-                        <div class="info-card reveal delay-3">
-                            <h3><span>🚀</span>Untuk Tim Pengembang</h3>
-                            <p>
-                                Pastikan semua anggota tim bekerja di lingkungan
-                                yang sama persis. Gajah Webserver bersifat
-                                portabel, mudah didistribusikan dan di-update.
-                            </p>
-                        </div>
+                    <div class="info-card reveal delay-1">
+                        
+                        <h3>Untuk Freelancer & Agensi</h3>
+                        <p>
+                            Kelola puluhan proyek klien dengan kebutuhan
+                            versi PHP yang berbeda tanpa pusing. Ganti
+                            lingkungan pengembangan dalam hitungan detik.
+                        </p>
+                    </div>
+                    <div class="info-card reveal delay-2">
+                        <h3>Untuk Mahasiswa & Pelajar</h3>
+                        <p>
+                            Lupakan konfigurasi rumit. Cukup unduh,
+                            jalankan, dan fokus pada hal terpenting: belajar
+                            dan membuat kode yang luar biasa.
+                        </p>
+                    </div>
+                    <div class="info-card reveal delay-3">
+
+                        <h3>Untuk Tim Pengembang</h3>
+                        <p>
+                            Pastikan semua anggota tim bekerja di lingkungan
+                            yang sama persis. Gajah Webserver bersifat
+                            portabel, mudah didistribusikan dan di-update.
+                        </p>
+                    </div>
                     </div>
                 </div>
             </section>
@@ -373,7 +390,7 @@
                 "@context": "https://schema.org",
                 "@type": "SoftwareApplication",
                 "name": "Gajah Webserver",
-                "operatingSystem": "Windows 10, Windows 11",
+                "operatingSystem": "Windows 10, Windows 11, Linux",
                 "applicationCategory": "DeveloperTool",
                 "description": "Gajah Webserver adalah server lokal untuk Windows dengan Nginx, Multi-PHP, MariaDB, Redis, dan Flutter. Ringan, cepat, dan open-source.",
                 "softwareVersion": "2.0",
@@ -410,6 +427,26 @@
                     body.style.setProperty("--x", e.clientX + "px");
                     body.style.setProperty("--y", e.clientY + "px");
                 });
+
+                // Copy to clipboard functionality
+                const copyButton = document.querySelector(".btn-copy");
+                const commandText = document.querySelector(".install-command-text");
+
+                if (copyButton && commandText) {
+                    copyButton.addEventListener("click", () => {
+                        navigator.clipboard.writeText(commandText.textContent.trim())
+                            .then(() => {
+                                const originalText = copyButton.textContent;
+                                copyButton.textContent = "Copied!";
+                                setTimeout(() => {
+                                    copyButton.textContent = originalText;
+                                }, 2000);
+                            })
+                            .catch(err => {
+                                console.error("Failed to copy: ", err);
+                            });
+                    });
+                }
             });
         </script>
     </body>
