@@ -1,8 +1,11 @@
+import { Redirect } from "@docusaurus/router";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
+import { useEffect } from "react";
 function HomepageHeader() {
-  window.location.href = "/"; 
-  const { siteConfig } = useDocusaurusContext();
+  useEffect(() => {
+    window.location.href = "/";
+  }, []);
   return (
     <></>
   );
