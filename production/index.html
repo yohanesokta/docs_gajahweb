@@ -52,51 +52,54 @@
 
     <body>
         <header class="hero">
+            <div class="hero-decoration hero-decoration-1"></div>
+            <div class="hero-decoration hero-decoration-2"></div>
             <div class="container reveal">
-                <img
-                    src="./assets/Gajah Web.png"
-                    alt="Logo Gajah Webserver - server lokal untuk developer modern"
-                    width="200px"
-                    style="padding: 30px 0"
-                />
-                <h1>Gajah Webserver</h1>
-                <p>
-                    Server Lokal Super Cepat untuk Developer Modern. Setup
-                    Nginx, Multi-PHP, MariaDB, dan Redis dengan satu klik.
-                    Ringan, bertenaga, dan siap untuk proyek masa depan Anda.
-                </p>
-                <p style="margin: 30px 0 10px 0;">Available for Windows and Linux</p>
+                <div class="hero-content">
+                    <img
+                        src="./assets/Gajah Web.png"
+                        alt="Gajah Webserver Logo"
+                        width="140px"
+                        class="hero-logo"
+                    />
+                    <h1>Build securely. <br>Build with Gajah.</h1>
+                    <p>
+                        Gajah Webserver is an open-source, cross-platform local development environment.
+                        Designed for speed and reliability, featuring Nginx, Multi-PHP, MariaDB, and Redis.
+                    </p>
 
-                <div class="linux-install-section reveal delay-4">
-                    <h4>Unix/Linux</h4>
-                    <div class="install-command-box">
-                        <span class="install-command-text">
-                            curl -fsSL http://install.gajahweb.tech/linux.sh | bash
-                        </span>
-                        <button class="btn btn-secondary btn-copy">Copy</button>
+                    <div class="hero-buttons">
+                        <a
+                            href="https://github.com/yohanesokta/WebServices-Gajah/releases/download/2.4/gajah-web-setup.exe"
+                            class="btn btn-primary"
+                            >Download v2.4 (LTS)</a
+                        >
+                        <a
+                            href="/page/docs/intro"
+                            class="btn btn-secondary"
+                            >Documentation</a
+                        >
+                    </div>
+
+                    <div class="linux-install-section reveal">
+                        <h4>Install on Linux</h4>
+                        <div class="install-command-box">
+                            <span class="install-command-text">
+                                curl -fsSL http://install.gajahweb.tech/linux.sh | bash
+                            </span>
+                            <button class="btn-copy">Copy</button>
+                        </div>
+                    </div>
+
+                    <div class="hero-mockup reveal">
+                        <img src="./example.png" alt="Gajah Webserver Interface Mockup" />
                     </div>
                 </div>
-                <div class="hero-buttons">
-                    <a
-                        href="https://github.com/yohanesokta/WebServices-Gajah/releases/download/2.3/gajah-web-setup.exe"
-                        class="btn btn-primary"
-                        >Unduh Versi Windows 64 bit</a
-                    >
-                    <a href="/page/docs/intro" class="btn btn-third"
-                        >Documentation</a
-                    >
-                    <a
-                        href="https://github.com/yohanesokta/WebServices-Gajah"
-                        class="btn btn-secondary"
-                        > Lihat di GitHub</a
-                    >
-                </div>
-                
             </div>
         </header>
 
-        <main>
-            <section id="features" class="container" style="padding: 60px 0">
+        <main >
+            <section id="features" class="container" style="padding-bottom: 80px; padding-top: 50px;" >
                 <h2 class="section-title reveal">Tumpukan Teknologi Modern</h2>
                 <div class="features-grid">
                     <div class="feature-card reveal delay-1">
@@ -179,7 +182,7 @@
                         <h2 class="section-title">
                             Didesain untuk Setiap Developer
                         </h2>
-                        <p class="section-subtitle">Membangun Masa Depan Web Bersama: Solusi Inovatif, Dokumentasi Lengkap, dan Alat Pengembangan Terdepan untuk Setiap Kebutuhan Anda.</p>
+                        <p style="padding: 20px 0;" class="section-subtitle">Membangun Masa Depan Web Bersama: Solusi Inovatif, Dokumentasi Lengkap, dan Alat Pengembangan Terdepan untuk Setiap Kebutuhan Anda.</p>
                     </div>
                     <div class="info-grid">
                     <div class="info-card reveal delay-1">
@@ -251,7 +254,7 @@
 
             <section id="getting-started" class="container">
                 <h2 class="section-title reveal">
-                    Mulai dalam 3 Langkah Mudah 🏁
+                    Mulai dalam 3 Langkah Mudah
                 </h2>
                 <div class="steps-container">
                     <div class="step reveal delay-1">
@@ -331,7 +334,7 @@
                         <h2 class="section-title">
                             Dibangun oleh Komunitas ❤️
                         </h2>
-                        <p>
+                        <p style="padding-bottom: 20px;">
                             Gajah Webserver adalah proyek open-source. Punya ide
                             brilian, menemukan bug, atau ingin menambahkan fitur
                             baru? Kami menyambut kontribusi Anda dengan tangan
@@ -350,7 +353,7 @@
                 <div class="cta-section reveal">
                     <div class="container">
                         <h2 class="section-title">Publikasi SAKERA ID</h2>
-                        <p>
+                        <p style="padding-bottom: 20px;">
                             Kami mengundang Anda untuk mencoba aplikasi ini dan lainya yang dikembangkan sebagai proyek kampus.
                         </p>
 
@@ -393,9 +396,9 @@
                 "operatingSystem": "Windows 10, Windows 11, Linux",
                 "applicationCategory": "DeveloperTool",
                 "description": "Gajah Webserver adalah server lokal untuk Windows dengan Nginx, Multi-PHP, MariaDB, Redis, dan Flutter. Ringan, cepat, dan open-source.",
-                "softwareVersion": "2.0",
+                "softwareVersion": "2.4",
                 "license": "https://opensource.org/licenses/MIT",
-                "downloadUrl": "https://github.com/yohanesokta/WebServices-Gajah/releases/download/v2.0/gajah-web-setup.exe",
+                "downloadUrl": "https://github.com/yohanesokta/WebServices-Gajah/releases/download/2.4/gajah-web-setup.exe",
                 "author": {
                     "@type": "Person",
                     "name": "Yohanes Oktanio"
